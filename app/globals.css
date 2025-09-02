@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -74,7 +73,7 @@ button, .btn, .badge { min-height: 44px; min-width: 44px; }
     @apply rounded-2xl p-5 md:p-6 shadow-lg;
   }
 
-  /* Buttons */
+  /* Buttons (base) */
   .btn {
     background-color: var(--card-elev);
     color: var(--text-primary);
@@ -84,12 +83,34 @@ button, .btn, .badge { min-height: 44px; min-width: 44px; }
   .btn:hover { filter: brightness(1.08); }
   .btn:active { transform: translateY(1px); }
 
-  /* Selected/pressed (used for env buttons in Quick Check) */
+  /* Selected/pressed (used by env buttons) */
   .btn[aria-pressed="true"], .btn.active {
     background-color: var(--accent);
     color: #fff;
     border-color: transparent;
   }
+
+  /* Button variants */
+  .btn-primary {
+    background-color: var(--accent);
+    color: #fff;
+    border-color: transparent;
+  }
+  .btn-primary:hover { filter: brightness(1.08); }
+
+  .btn-lg {
+    padding: 0.9rem 1.25rem;
+    font-size: 1.05rem;
+    border-radius: 9999px;
+  }
+
+  /* Ko-fi look */
+  .btn-kofi {
+    background-color: #72a4f2;
+    color: #0b1020;
+    border-color: transparent;
+  }
+  .btn-kofi:hover { filter: brightness(1.08); }
 
   /* Inputs */
   .input {
