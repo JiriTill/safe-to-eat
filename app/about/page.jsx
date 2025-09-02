@@ -74,6 +74,14 @@ export default function AboutPage() {
           (work-in-progress).
         </p>
       </section>
+      
+      <div className="card">
+        <p className="mb-3">If you find this helpful, you can support us:</p>
+        <a href="https://ko-fi.com/T6T31JW6G3" target="_blank" rel="noreferrer" className="btn">Support on Ko-Fi</a>
+      </div>
+
+      <Link href="/" className="inline-flex items-center gap-2 text-sm link">&larr; Back to home</Link>
+      
     </div>
   );
 }
