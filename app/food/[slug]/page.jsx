@@ -161,14 +161,24 @@ export default function FoodPage({ params, searchParams }) {
         </div>
       )}
 
-      {/* CTA: New check / Home */}
-      <div className="pt-2">
-        <hr className="border-slate-700 mb-4" />
-        <div className="flex flex-wrap gap-3">
-          <Link href="/" className="btn">New check</Link>
-          <Link href="/#quick" className="btn" title="Jump to Quick check on the homepage">Quick check</Link>
+      {/* Support + New Check CTA */}
+      <section className="card text-center space-y-4">
+        <div>
+          <a
+            href="https://ko-fi.com/T6T31JW6G3"
+            target="_blank"
+            rel="noreferrer"
+            className="btn btn-kofi btn-lg"
+            aria-label="Support us on Ko-fi"
+          >
+            ☕ Support on Ko-fi
+          </a>
         </div>
-      </div>
+      
+        <div className="pt-1">
+          <a href="/" className="btn btn-primary btn-lg">New check</a>
+        </div>
+      </section>
 
       <div className="text-sm text-slate-400">
         Sources on this site are summarized from USDA, FoodSafety.gov, and FDA recall notices. This
