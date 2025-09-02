@@ -1,23 +1,17 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import QuickWizard from "@/components/QuickWizard";
 import posts from "@/data/posts.json";
 import { FAQ } from "@/components/FAQ";
 
 // simple home FAQ items
 const homeFaq = [
-  {
-    q: "What’s the 2-hour rule?",
-    a: "Perishables left out at room temperature for 2 hours (1 hour if > 90°F / 32°C) should be discarded."
-  },
-  {
-    q: "How accurate are these timelines?",
-    a: "They’re conservative summaries of mainstream U.S. guidance. Always consider handling, smell, and texture."
-  },
-  {
-    q: "Do freezing times affect safety?",
-    a: "Freezing keeps food safe indefinitely but quality declines. Follow best-quality windows in each item."
-  }
+  { q: "What’s the 2-hour rule?", a: "Perishables at room temp over 2 hours (1 hour if > 90°F / 32°C) should be discarded." },
+  { q: "Do freezing times affect safety?", a: "Freezing keeps food safe indefinitely; quality declines over time." },
+  { q: "Are timelines US-only?", a: "We summarize US guidance (USDA/FDA). Always follow your local rules and labels." },
+  { q: "How accurate are these estimates?", a: "They’re conservative and assume proper handling and a ≤ 40°F / 4°C fridge." },
+  { q: "What if my food isn’t listed?", a: "Try a close match via synonyms; we’ll be expanding coverage. When in doubt, throw it out." },
 ];
 
 export const metadata = {
@@ -37,16 +31,22 @@ export default function Home() {
           <p className="text-[var(--text-secondary)] text-lg">
             Quick, conservative timelines for <strong>fridge</strong>, <strong>freezer</strong>, and <strong>room temp</strong>.
           </p>
-          {/* example badges */}
           <div className="flex flex-wrap gap-2 text-sm">
-            <span className="px-2.5 py-1 rounded-md bg-[var(--safe-bg)] text-[var(--safe)] border border-[var(--border)]">✓ Pizza: 3 days fridge</span>
-            <span className="px-2.5 py-1 rounded-md bg-[var(--danger-bg)] text-[var(--danger)] border border-[var(--border)]">✗ Rice: 8 hours out</span>
+            <span className="badge badge-safe">✓ Pizza: 3 days fridge</span>
+            <span className="badge badge-danger">✗ Rice: 8 hours out</span>
           </div>
         </div>
-        <div className="card h-56 md:h-72 flex items-center justify-center">
-          <div className="text-center text-sm text-[var(--text-muted)]">
-            Hero image 4:3 (flat illustration) — desktop only
-          </div>
+
+        {/* 4:3 hero image */}
+        <div className="relative w-full h-56 md:h-72 card overflow-hidden">
+          <Image
+            src="/hero.png"
+            alt="Family looking into a fridge, unsure if food is safe"
+            fill
+            sizes="(min-width: 768px) 480px, 100vw"
+            className="object-cover"
+            priority
+          />
         </div>
       </section>
 
