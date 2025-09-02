@@ -2,6 +2,7 @@ import React from "react";
 import "./globals.css";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import Script from "next/script";
 
 export const metadata = {
   title: "Is it Safe to Eat?",
@@ -18,6 +19,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        {/* Ko-Fi floating widget (after page becomes interactive) */}
+        
+        <Script src="https://storage.ko-fi.com/cdn/widget/Widget_2.js" strategy="afterInteractive" />
+        <Script id="kofi-init" strategy="afterInteractive">
+          {`try{ kofiwidget2.init('Support me on Ko-fi','#72a4f2','T6T31JW6G3'); kofiwidget2.draw(); }catch(e){}`}
+        </Script>
+        
         <header className="border-b border-slate-800">
           <div className="container py-4 flex items-center justify-between gap-4">
             <Link href="/" className="font-bold text-lg hover:opacity-90">
