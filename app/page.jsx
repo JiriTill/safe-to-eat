@@ -82,21 +82,49 @@ export default function Home() {
       </section>
 
       {/* SEO RICH TEXT */}
-      <section className="card space-y-3">
-        <h2 className="text-lg font-semibold">How long does food last in the fridge or freezer?</h2>
-        <p>
-          People often search for: <em>how long does cooked chicken last in the fridge</em>, <em>how long is pizza good for</em>,
-          <em> leftover rice safety</em>, <em>is sushi safe next day</em>, <em>how long do eggs keep</em>, or <em>cut fruit in fridge</em>.
-          Our timelines cover <strong>poultry, beef, pork, seafood, dairy, eggs, produce, grains, soups & stews, and takeout</strong>,
-          with quick answers for fridge, freezer, and room temperature.
-        </p>
-        <p>
-          Example long-tail questions we address: “How long do leftovers last in the fridge?”, “Is it safe to eat pizza left out overnight?”,
-          “Can I freeze cooked rice?”, “How long does watermelon last once cut?”, “How long can deli meat stay in the fridge?”.
-        </p>
-        <p className="text-sm text-slate-400">
-          Tip: Keep your fridge at ≤ 40°F / 4°C and reheat leftovers to 165°F / 74°C.
-        </p>
+      <section aria-labelledby="seo" className="space-y-3">
+        <h2 id="seo" className="text-xl font-semibold">How long does food last in the fridge or freezer?</h2>
+        <div className="prose prose-invert max-w-none">
+          <p>
+            Not sure whether last night’s <strong>fried chicken</strong> is still good, how long
+            <strong> pizza </strong> lasts in the fridge, or if <strong>leftover rice</strong> is safe to reheat? You’re not alone. People search every day for
+            questions like <em>“how long does cooked chicken last in the fridge,” “is pizza safe after being left out overnight,” “is sushi safe the next day,”
+            “how long do eggs keep,”</em> and <em>“how long does cut fruit last in the fridge.”</em> This site gives plain-English, conservative timelines for
+            <strong> fridge</strong>, <strong>freezer</strong>, and <strong>room temperature</strong> so you can decide quickly and confidently.
+          </p>
+          <p>
+            Our guidance focuses on common foods: <strong>poultry</strong> (rotisserie chicken, fried chicken, turkey), <strong>beef &amp; pork</strong> (steaks,
+            ground meat, deli meat), <strong>seafood</strong> (cooked fish, raw fish, shrimp, sushi takeout), <strong>dairy &amp; eggs</strong> (milk, yogurt,
+            cream cheese, hard-boiled eggs), <strong>produce</strong> (cut watermelon and cantaloupe, strawberries, blueberries), <strong>grains</strong> (cooked
+            rice, pasta), and <strong>prepared foods</strong> (pizza, soups, stews, takeout). Each item shows a fridge window, freezer storage time, and whether
+            room-temperature holding is recommended.
+          </p>
+          <h3>Quick answers for high-intent searches</h3>
+          <ul>
+            <li><strong>Cooked chicken in the fridge:</strong> typically 3–4 days if cooled fast and stored ≤ <strong>40°F / 4°C</strong>.</li>
+            <li><strong>Pizza in the fridge:</strong> usually 3–4 days; toss if it sat out over 2 hours at room temp.</li>
+            <li><strong>Leftover rice safety:</strong> cool quickly, refrigerate within 2 hours, and reheat thoroughly to <strong>165°F / 74°C</strong>.</li>
+            <li><strong>Sushi next day:</strong> best within 24 hours if kept cold; use smell/texture and time as your guides.</li>
+            <li><strong>Cut fruit:</strong> refrigerate promptly; most is best within 3–4 days.</li>
+          </ul>
+          <h3>Why time and temperature matter</h3>
+          <p>
+            Refrigeration slows bacterial growth but does not stop it. Quality and safety change over time, especially if food lingered in the
+            <em> danger zone</em> (40–140°F / 4–60°C). That’s why the <strong>2-hour rule</strong> exists for perishables at room temperature (1 hour if above
+            90°F / 32°C). When reheating leftovers, aim for <strong>165°F / 74°C</strong> so heat reaches the center quickly. Freezing keeps food <em>safe</em>
+            indefinitely, though flavor and texture are best when used within a few months.
+          </p>
+          <h3>How to use this site</h3>
+          <p>
+            Start typing a food name (e.g., <em>fried chicken</em>, <em>cooked rice</em>, <em>cut watermelon</em>) and choose the storage location
+            (<em>fridge</em>, <em>freezer</em>, or <em>room temp</em>). Enter the time, and you’ll get an instant verdict: <strong>Safe to eat</strong>,
+            <strong> Use caution</strong>, or <strong>Discard</strong>—plus clear bullets and a timeline you can scan in seconds.
+          </p>
+          <p>
+            We summarize mainstream U.S. sources (USDA, FoodSafety.gov, FDA). Always follow label directions and local guidance. If anything seems off—slimy,
+            sour, or moldy—trust your senses and remember the golden rule: <strong>When in doubt, throw it out.</strong>
+          </p>
+        </div>
       </section>
     </div>
   );
